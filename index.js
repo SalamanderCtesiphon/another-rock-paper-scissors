@@ -46,12 +46,6 @@ function playGame (humanScore, computerScore) {
 
   
 
-  while(humanScore || humanScore <= 5) {
-    playRound(humanScore, computerScore);
-    humanScore = humanScore;
-    computerScore = computerScore;
-    console.log(`Player score: ${humanScore} computer score ${computerScore}`);
-  }
 
 
 };
