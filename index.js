@@ -13,41 +13,33 @@ function getHumanChoice() {
   return text2;
 };
 
-
-
-
 function playRound(humanScore, computerScore) { 
   let humanChoice = getHumanChoice();
   let computerChoice = getComputerChoice();
 
   if (humanChoice === "Rock" && computerChoice === "Scissors" || 
-    humanChoice === "Paper" && computerChoice === "Rock" || 
-    humanChoice === "Scissors" && computerChoice === "Paper") {
+      humanChoice === "Paper" && computerChoice === "Rock" || 
+      humanChoice === "Scissors" && computerChoice === "Paper") {
       humanScore++;
       console.log(humanChoice + " beats " + computerChoice + ". " + "Player's score: " + humanScore);
       return humanScore;
   } else if (humanChoice === "Rock" && computerChoice === "Rock" || 
-    humanChoice === "Paper" && computerChoice === "Paper" || 
-    humanChoice === "Scissors" && computerChoice === "Scissors") {
+      humanChoice === "Paper" && computerChoice === "Paper" || 
+      humanChoice === "Scissors" && computerChoice === "Scissors") {
       console.log(humanChoice + " ties with " + computerChoice + ". ");
   } else if (humanChoice === "Rock" && computerChoice === "Paper" || 
-    humanChoice === "Paper" && computerChoice === "Scissors" || 
-    humanChoice === "Scissors" && computerChoice === "Rock") {
+      humanChoice === "Paper" && computerChoice === "Scissors" || 
+      humanChoice === "Scissors" && computerChoice === "Rock") {
       computerScore++;
       console.log(computerChoice + " beats " + humanChoice + ". " + "Computer's score: " + computerScore);
       return computerScore;
   } else { console.log("enter a valid choice: Rock, Paper or Scissors") }
 };
+
 let humanScore = 0;
 let computerScore = 0;
 function playGame (humanScore, computerScore) {
-  
-  
-
-  
-
-
-
+  playRound(humanScore, computerScore);
 };
 
 playGame(humanScore, computerScore);
