@@ -7,7 +7,12 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   const getUserInput = prompt("Enter either: Rock, Paper or Scissors");
-  return getUserInput;
+  let text1 = getUserInput.toLowerCase();
+  let fLet = text1.at(0);
+  let flet2 = fLet.toUpperCase()
+  let text2 = flet2.concat("", text1.slice(1));
+  
+  return text2;
 };
 
 let humanScore = 0;
