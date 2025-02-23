@@ -13,6 +13,9 @@ function getHumanChoice() {
   return text2;
 };
 
+let humanScore = 0;
+let computerScore = 0;
+
 function playRound(humanScore, computerScore) { 
   let humanChoice = getHumanChoice();
   let computerChoice = getComputerChoice();
@@ -36,10 +39,12 @@ function playRound(humanScore, computerScore) {
   } else { console.log("enter a valid choice: Rock, Paper or Scissors") }
 };
 
-let humanScore = 0;
-let computerScore = 0;
+
 function playGame (humanScore, computerScore) {
   playRound(humanScore, computerScore);
+  humanScore = humanScore;
+  computerScore = computerScore;
+  console.log(`PLAYER SCORE: ${humanScore} COMPUTER SCORE: ${computerScore}`);
 };
 
 playGame(humanScore, computerScore);
