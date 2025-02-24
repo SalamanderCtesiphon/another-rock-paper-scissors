@@ -19,6 +19,16 @@ gameLog.textContent = "Sample Text";
 const playerChoices = document.querySelector("#playerChoices");
 playerChoices.textContent = "These are the player's choices";
 
+const newGameBtn = document.querySelector("#new");
+newGameBtn.addEventListener("click", function(e) {
+  playerChoices.textContent = "These are the player's choices";
+  gameLog.textContent = "New game selected";
+  playerScoreCard.textContent = 0;
+  computerScoreCard.textContent = 0;
+  humanScore = 0;
+  computerScore = 0;
+});
+
 function playRound(humanChoice) { 
   let computerChoice = getComputerChoice();
   playerChoices.textContent = `Player : ${humanChoice}  Computer: ${computerChoice}`;
@@ -53,7 +63,12 @@ rockBtn.addEventListener("click", () => {
   }
   playerScoreCard.textContent = humanScore;
   computerScoreCard.textContent = computerScore;
-
+  if(humanScore > 4){
+    gameLog.textContent = "Player won!!!!!!!!!!!";
+  }
+  if(computerScore > 4) {
+    gameLog.textContent = "Sorry Charlie, computer won!";
+  }
   });
 
 const paperBtn = document.querySelector("#paper");
@@ -71,6 +86,12 @@ paperBtn.addEventListener("click", () => {
   }
   playerScoreCard.textContent = humanScore;
   computerScoreCard.textContent = computerScore;
+  if(humanScore > 4){
+    gameLog.textContent = "Player won!!!!!!!!!!!";
+  }
+  if(computerScore > 4) {
+    gameLog.textContent = "Sorry Charlie, computer won!";
+  }
 
 });
 
@@ -90,4 +111,10 @@ scissorsBtn.addEventListener("click", () => {
   }
   playerScoreCard.textContent = humanScore;
   computerScoreCard.textContent = computerScore;
+  if(humanScore > 4){
+    gameLog.textContent = "Player won!!!!!!!!!!!";
+  }
+  if(computerScore > 4) {
+    gameLog.textContent = "Sorry Charlie, computer won!";
+  }
 });
