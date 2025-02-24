@@ -63,4 +63,18 @@ function playGame () {
   }
 };
 
-playGame();
+
+const rockBtn = document.querySelector("#rock");
+rockBtn.addEventListener("click", () => {
+  alert("You pressed Rock");
+});
+
+const paperBtn = document.querySelector("#paper");
+paperBtn.addEventListener("click", () => {
+  alert("You pressed Paper");
+});
+
+const scissorsBtn =document.querySelector("#scissors");
+scissorsBtn.addEventListener("click", () => {
+  alert("You Pressed Scissors");
+});
