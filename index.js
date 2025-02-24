@@ -42,7 +42,7 @@ function playGame () {
   let humanScore = 0;
   let computerScore = 0;
   let gameResults = "";
-  while (humanScore < 5 && computerScore < 5) {
+  while (humanScore < 1 && computerScore < 1) {
   gameResults = playRound();
   if (gameResults === "No win") {
     console.log("No Winner")
