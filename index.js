@@ -56,7 +56,11 @@ function playGame () {
     
   console.log(`PLAYER SCORE: ${humanScore} COMPUTER SCORE: ${computerScore}`);
   }
-  
+  if (humanScore === 5) {
+    console.log("Player won!");
+  } else {
+    console.log("Computer won!");
+  }
 };
 
 playGame();
