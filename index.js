@@ -23,14 +23,17 @@ function playRound() {
       humanChoice === "Paper" && computerChoice === "Rock" || 
       humanChoice === "Scissors" && computerChoice === "Paper") {
       console.log(humanChoice + " beats " + computerChoice + ". ");
+      return "Player win"
   } else if (humanChoice === "Rock" && computerChoice === "Rock" || 
       humanChoice === "Paper" && computerChoice === "Paper" || 
       humanChoice === "Scissors" && computerChoice === "Scissors") {
       console.log(humanChoice + " ties with " + computerChoice + ". ");
+      return "No win"
   } else if (humanChoice === "Rock" && computerChoice === "Paper" || 
       humanChoice === "Paper" && computerChoice === "Scissors" || 
       humanChoice === "Scissors" && computerChoice === "Rock") {
       console.log(computerChoice + " beats " + humanChoice + ". ");
+      return "Computer win"
   } else { console.log("enter a valid choice: Rock, Paper or Scissors") }
 };
 
@@ -38,8 +41,19 @@ function playRound() {
 function playGame () {
   let humanScore = 0;
   let computerScore = 0;
+  while (humanScore <= 5 || computerScore <= 5) {
   playRound();
+  if ("Player win") {
+    humanScore++
+    console.log("Player win!")
+  } else if ("Computer win") {
+    console.log("Computer win")
+    computerScore++
+  }
+    
   console.log(`PLAYER SCORE: ${humanScore} COMPUTER SCORE: ${computerScore}`);
+  }
+  
 };
 
 playGame();
