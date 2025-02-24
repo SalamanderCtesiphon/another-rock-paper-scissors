@@ -41,14 +41,17 @@ function playRound() {
 function playGame () {
   let humanScore = 0;
   let computerScore = 0;
-  while (humanScore <= 5 || computerScore <= 5) {
-  playRound();
-  if ("Player win") {
-    humanScore++
-    console.log("Player win!")
-  } else if ("Computer win") {
+  let gameResults = "";
+  while (humanScore < 5 && computerScore < 5) {
+  gameResults = playRound();
+  if (gameResults === "No win") {
+    console.log("No Winner")
+  } else if (gameResults === "Computer win") {
     console.log("Computer win")
     computerScore++
+  } else if (gameResults === "Player win") {
+    humanScore++
+    console.log("Player win")
   }
     
   console.log(`PLAYER SCORE: ${humanScore} COMPUTER SCORE: ${computerScore}`);
