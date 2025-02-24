@@ -22,7 +22,7 @@ function playRound() {
   if (humanChoice === "Rock" && computerChoice === "Scissors" || 
       humanChoice === "Paper" && computerChoice === "Rock" || 
       humanChoice === "Scissors" && computerChoice === "Paper") {
-      console.log(humanChoice + " beats " + computerChoice + ". " + "Player's score: ");
+      console.log(humanChoice + " beats " + computerChoice + ". ");
   } else if (humanChoice === "Rock" && computerChoice === "Rock" || 
       humanChoice === "Paper" && computerChoice === "Paper" || 
       humanChoice === "Scissors" && computerChoice === "Scissors") {
@@ -30,7 +30,7 @@ function playRound() {
   } else if (humanChoice === "Rock" && computerChoice === "Paper" || 
       humanChoice === "Paper" && computerChoice === "Scissors" || 
       humanChoice === "Scissors" && computerChoice === "Rock") {
-      console.log(computerChoice + " beats " + humanChoice + ". " + "Computer's score: ");
+      console.log(computerChoice + " beats " + humanChoice + ". ");
   } else { console.log("enter a valid choice: Rock, Paper or Scissors") }
 };
 
